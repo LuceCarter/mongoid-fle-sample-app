@@ -37,6 +37,11 @@ To use CSFLE with Mongoid, you must have the following:
    export ATLAS_URI=<your MongoDB Atlas connection string>
    export LOCAL_MASTER_KEY=<Random 96-byte string>
    ```
+
+   You can generate a random 96-byte string for use in the LOCAL_MASTER_KEY environment variable above by running the following ruby command:
+   ```shell
+   ruby -r securerandom -e 'puts SecureRandom.alphanumeric(96)'
+   ```
 4. Create your first data key:
 
    ```shell
